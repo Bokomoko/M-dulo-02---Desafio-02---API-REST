@@ -10,8 +10,8 @@ const path = require('path');
 // criar o servidor
 const myServer = express();
 
-// obtem a porta em que o servidor vai ouvir. default 3000
-const PORT = process.env.PORT || 3000;
+// obtem a porta em que o servidor vai ouvir. default 8080
+const PORT = process.env.PORT || 8080;
 
 // ambiente de desenvolvimento
 const NODE_ENV = process.env.NODE_ENV || 'development';
@@ -19,7 +19,7 @@ const NODE_ENV = process.env.NODE_ENV || 'development';
 myServer.set('port', PORT);
 myServer.set('env', NODE_ENV);
 myServer.use(logger('tiny'));
-// body do server já vem em json
+// req.body já vem em json
 myServer.use(bodyParser.json());
 
 // o arquvivo index.js vai ser incluido aqui e vai criar as rotas
