@@ -27,4 +27,8 @@ require('./src/Routes/index')(myServer);
 
 console.log('Grades Server started\nListening on port', PORT);
 // ativa o servidor
-myServer.listen(PORT);
+// ativa o servidor
+myServer.listen(PORT, ()=> {
+  console.log('Grades Server started\nListening on port', PORT);
+};
+

@@ -7,7 +7,8 @@
 - Optimize routes. They´re OK but could be better
 
 ## List of services
- |**Action**                                      |Verb  | URL           |
+ |Action                                       |Verb  | URL           |
+ |---------------------------------------------|------|---------------|
  |Insert new grade into the system             |POST  |/grade         |
  |Update pre-existing grade by Id              |PUT   |/grade/:id     |
  |Delete a pre-existing grade by Id            |DELETE|/grade/:id     |
@@ -19,5 +20,4 @@
  |List subjects                                |POST  |/listsubjects  |
  |List students                                |POST  |/liststudents  |
  |List types                                   |POST  |/listtypes     |
-=======
 
