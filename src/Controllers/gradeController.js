@@ -3,11 +3,7 @@ const gradesFileName = './data/grades.json';
 
 function nowTimeStamp() {
   const rightNow = new Date();
-  return `${rightNow.getFullYear()}-${to00(rightNow.getMonth())}-${to00(
-    rightNow.getDate()
-  )}T${to00(rightNow.getHours())}:${to00(rightNow.getMinutes())}:${to00(
-    rightNow.getSeconds()
-  )}.${+to00(rightNow.getMilliseconds(), 3)}Z`;
+  return rightNow.toISOString();
 }
 
 function to00(number, places) {
@@ -20,6 +16,7 @@ function to00(number, places) {
 // reads a single json file and returns an object
 function readJSfile(afile) {
   console.log('Opening file', afile);
+  // reading the file synchronously. Watch out if it became too slow
   const readString = fs.readFileSync(afile, 'utf8', (error, data) => {
     if (error) throw error;
     console.log('succesfully read data');
